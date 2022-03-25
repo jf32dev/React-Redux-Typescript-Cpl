@@ -1,0 +1,6 @@
+@use "../../style/variables" as *;
+.app {
+  background-color: $brand-dark-white;
+  height: 100%;
+  width: 100%;
+}

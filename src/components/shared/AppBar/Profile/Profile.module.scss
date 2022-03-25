@@ -1,0 +1,31 @@
+@use '../../../../style/variables' as v;
+@use '../../../../style/mixins' as m;
+
+.profile {
+  align-items: center;
+  display: flex;
+  .thumbnail {
+    background-color: v.$brand-dark-grey;
+    border-radius: 50%;
+    height: m.rem(35px);
+    width: m.rem(35px);
+    .initials {
+      align-items: center;
+      color: v.$brand-white;
+      display: flex;
+      font-family: v.$font-bold;
+      font-weight: bold;
+      height: 100%;
+      justify-content: center;
+      width: 100%;
+    }
+    img {
+      border-radius: 50%;
+      height: auto;
+      width: 100%;
+    }
+  }
+  .detail {
+    margin-left: m.rem(8px);
+  }
+}

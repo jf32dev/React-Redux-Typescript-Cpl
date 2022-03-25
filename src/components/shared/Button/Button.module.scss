@@ -1,0 +1,23 @@
+@use '../../../style/variables' as *;
+@use '../../../style/mixins' as *;
+
+.button {
+  background-color: $brand-blue;
+  border: unset;
+  border-radius: rem(31px);
+  color: $brand-white;
+  font-family: $font-sf-pro-text-semibold;
+  font-size: rem(15px);
+  line-height: rem(24px);
+  margin: rem(25px) auto 0 auto;
+  min-width: rem(200px);
+  padding: rem(9px) rem(20px);
+
+  @include media('<=sm', 'portrait') {
+    margin-top: rem(15px);
+  }
+
+  &:hover {
+    @include hover;
+  }
+}

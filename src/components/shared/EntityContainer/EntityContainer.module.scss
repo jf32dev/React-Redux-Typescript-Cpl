@@ -1,0 +1,15 @@
+@use '../../../style/variables' as *;
+@use '../../../style/mixins' as *;
+
+.entity-container {
+  display: flex;
+  padding: rem(40px) rem(40px) 0 rem(40px);
+  @include media('>=xl') {
+    padding: rem(40px) rem(40px) 0 rem(40px);
+  }
+  @include media('<=sm', 'portrait') {
+    flex-direction: column;
+    overflow-y: auto;
+    padding: rem(30px) rem(16px) rem(23px) rem(16px);
+  }
+}

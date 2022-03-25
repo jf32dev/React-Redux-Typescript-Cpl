@@ -1,0 +1,127 @@
+@use '../../../style/variables' as *;
+@use '../../../style/mixins' as *;
+
+.story {
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.85;
+  }
+
+  .caption {
+    @include media('<sm') {
+      height: rem(75px);
+    }
+    p {
+      color: $brand-black-text;
+      font-family: $font-openSans-regular;
+      font-size: rem(14px);
+      line-height: rem(19px);
+      margin: rem(8px) 0px;
+      text-align: center;
+      @include clamp(1);
+      @include media('<sm') {
+        @include clamp(2);
+      }
+    }
+  }
+
+  .thumbnail::after {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    content: '';
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .thumbnail {
+    border: 1px solid rgba($brand-black, 0.05);
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 100%;
+    position: relative;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .icon-top {
+      align-items: center;
+      color: $brand-white;
+      display: flex;
+      height: rem(45px);
+      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 99999;
+      > div {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        > img {
+          height: rem(20px);
+          position: relative;
+          width: rem(20px);
+        }
+        > span {
+          font-size: rem(14px);
+          font-style: normal;
+          font-weight: 600;
+          margin-left: rem(2px);
+          width: rem(20px);
+        }
+      }
+    }
+
+    .icon-bottom {
+      align-items: center;
+      bottom: 0;
+      color: $brand-white;
+      display: flex;
+      height: rem(45px);
+      justify-content: flex-start;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 99999;
+      > div {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-left: rem(10px);
+        > img {
+          height: rem(20px);
+          position: relative;
+          width: rem(20px);
+        }
+        > span {
+          font-size: rem(14px);
+          font-style: normal;
+          font-weight: 600;
+          height: rem(15px);
+          margin-left: rem(2px);
+          width: rem(20px);
+        }
+      }
+    }
+  }
+}

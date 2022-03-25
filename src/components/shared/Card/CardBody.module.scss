@@ -1,0 +1,9 @@
+@use '../../../style/variables' as v;
+
+.body {
+  flex: 1;
+  > * {
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,87 @@
+@use './typography.scss' as typo;
+
+// Grid breakpoints
+
+// change this breakpoint, container max, gutter, and offset
+// as needed for responsivity and grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 680px,
+  md: 975px,
+  lg: 1200px,
+  xl: 1380px,
+) !default;
+
+// Max Grid containers
+$container-max-widths: (
+  xs: 600px,
+  sm: 645px,
+  md: 880px,
+  lg: 1115px,
+  xl: 1295px,
+) !default;
+
+// Gutter Width
+$gutter-width: (
+  xs: 15px,
+  sm: 15px,
+  md: 20px,
+  lg: 25px,
+  xl: 25px,
+) !default;
+
+$offset-width: (
+  xs: 0,
+  sm: 0,
+  md: 30px,
+  lg: 42px,
+  xl: 60px,
+) !default;
+
+// Grid columns
+$grid-columns: 12 !default;
+
+// This always pulls md size as default
+$grid-gutter-width: map-get(
+  $map: $gutter-width,
+  $key: 'md',
+);
+
+$grid-row-columns: 6 !default;
+// enabling this will give capability to use css class directly without providing
+// mixins on the classnames.
+$enable-grid-classes: false !default;
+
+// Brand Colors
+
+// Typography
+
+$font-regular: OpenSans Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+  'Helvetica Neue', sans-serif;
+$font-medium: $font-regular;
+$font-bold: $font-regular;
+$font-sf-pro-text-regular: 'SF Pro Text Regular', Helvetica, sans-serif;
+$font-sf-pro-text-semibold: 'SF Pro Text Semibold', Helvetica, sans-serif;
+$font-sf-pro-text-bold: 'SF Pro Text Bold', Helvetica, sans-serif;
+$font-openSans-regular: OpenSans Regular;
+$font-openSans-medium: OpenSans SemiBold;
+$font-openSans-bold: OpenSans Bold;
+$font-Segoe-regular: Segoe UI Regular;
+
+// html font size
+$font-size-html: 10px;
+$line-height-base: 1.35;
+
+$font-size-base: 14px;
+
+// Brand Colors
+$brand-white: #ffffff;
+$brand-black: #000000;
+$brand-grey: #a5a6ac;
+$brand-dark-grey: #2f2f2f;
+$brand-black-text: #222222;
+$brand-orange: #d44633;
+$brand-blue: #004b8d;
+$brand-dark-white: #e5e5e5;
+$brand-grey: #7a7a7a;

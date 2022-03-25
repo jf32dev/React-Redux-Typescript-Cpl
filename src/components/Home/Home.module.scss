@@ -1,0 +1,75 @@
+@use "../../style/variables" as *;
+@use '../../style/mixins' as *;
+
+.home {
+  background-color: $brand-dark-white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  @include media('height<=sm') {
+    overflow: auto;
+  }
+
+  @include media('<=sm', 'portrait') {
+    height: auto;
+    overflow: auto;
+  }
+  .banner {
+    height: 73%;
+    min-height: rem(400px);
+
+    @include media('<lg', 'landscape') {
+      height: 65%;
+    }
+
+    @include media('<=sm', 'portrait') {
+      height: rem(450px);
+    }
+    .logo {
+      height: rem(100px);
+      @include media('<=sm', 'portrait') {
+        height: rem(70px);
+        margin: 0 auto rem(20px) auto;
+        width: rem(300px);
+      }
+    }
+    .button-list {
+      display: flex;
+      justify-content: space-around;
+
+      @include media('<=sm', 'portrait') {
+        flex-direction: column;
+        width: auto;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    min-height: rem(200px);
+    overflow-y: hidden;
+
+    .loader {
+      width: 100%;
+    }
+
+    .content {
+      flex: 1;
+      height: calc(60vh - 10rem);
+      overflow-x: auto;
+
+      .topic {
+        display: flex;
+        flex-wrap: unset;
+        margin: 0;
+        overflow-x: auto;
+        padding: rem(20px) 0;
+
+        @include media('<=sm', 'portrait') {
+          display: unset;
+        }
+      }
+    }
+  }
+}

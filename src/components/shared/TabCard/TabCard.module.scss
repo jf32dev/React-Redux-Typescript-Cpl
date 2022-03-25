@@ -1,0 +1,33 @@
+@use '../../../style/variables' as *;
+@use '../../../style/mixins' as *;
+
+.tab-card {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: rem(8px);
+  color: $brand-white;
+  display: flex;
+  flex-direction: column;
+  height: rem(174px);
+  justify-content: flex-end;
+  margin-right: rem(16px);
+  min-width: rem(247px);
+  position: relative;
+
+  @include media('<=sm', 'portrait') {
+    height: rem(193px);
+    margin-bottom: rem(16px);
+    width: 100%;
+  }
+
+  > div {
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 rem(8px) rem(8px);
+    font-family: $font-sf-pro-text-semibold;
+    font-size: rem(17px);
+    line-height: rem(24px);
+    padding: rem(8px) rem(1px) rem(8px) rem(1px);
+    text-align: center;
+  }
+}

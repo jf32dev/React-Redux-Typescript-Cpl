@@ -1,0 +1,26 @@
+@use '../../../style/variables' as *;
+@use '../../../style/mixins' as *;
+
+.banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  @include media('<=sm', 'portrait') {
+    height: rem(420px);
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: rem(450px);
+
+    @include media('<=sm', 'portrait') {
+      max-width: rem(370px);
+    }
+  }
+}

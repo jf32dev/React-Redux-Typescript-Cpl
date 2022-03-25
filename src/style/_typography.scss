@@ -1,0 +1,73 @@
+// @include font-face('Bull Regular', '../assets/fonts/Bull/BullLatin-Regular');
+
+// Example:
+
+// @font-face {
+//   font-display: swap;
+//   font-family: 'Bull Regular';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url('../assets/fonts/Bull/BullLatin-Regular.woff2') format('woff2'),
+//     url('../assets/fonts/Bull/BullLatin-Regular.woff') format('woff');
+// }
+
+@font-face {
+  font-display: swap;
+  font-family: 'SF Pro Text Semibold';
+  font-style: normal;
+  src: url('../assets/fonts/SF-Pro/SF-Pro-Text-Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'SF Pro Text Regular';
+  font-style: normal;
+  src: url('../assets/fonts/SF-Pro/SF-Pro-Text-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'SF Pro Text Bold';
+  font-style: normal;
+  src: url('../assets/fonts/SF-Pro/SF-Pro-Display-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenSans Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/openSans/OpenSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenSans Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/openSans/OpenSansBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenSans Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/openSans/OpenSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenSans SemiBold';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/openSans/OpenSansSemibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenSans Italic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/openSans/OpenSansItalic.ttf') format('truetype');
+}

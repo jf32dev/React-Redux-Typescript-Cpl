@@ -1,0 +1,14 @@
+@use '../../../style/mixins' as *;
+
+.row {
+  overflow-x: auto;
+}
+
+.top-content-item {
+  width: max-content;
+  & > div {
+    float: left;
+    margin-right: rem(10px);
+    width: rem(170px);
+  }
+}
